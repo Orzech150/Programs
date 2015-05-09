@@ -1,5 +1,4 @@
 #include "plansza.h"
-#include <cstdlib>
 
 short ruch = 0;
 char tab[3][3] = {}; // x = krzyzyk stoi o = kolko stoi;
