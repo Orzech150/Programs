@@ -177,37 +177,8 @@ void plansza::zapisz_ruch(short wybor)
 	else
 		znak = 'x';
 
-	switch (wybor)
-	{
-	case 1:
-		tab[0][0] = znak;
-		break;
-	case 2:
-		tab[0][1] = znak;
-		break;
-	case 3:
-		tab[0][2] = znak;
-		break;
-	case 4:
-		tab[1][0] = znak;
-		break;
-	case 5:
-		tab[1][1] = znak;
-		break;
-	case 6:
-		tab[1][2] = znak;
-		break;
-	case 7:
-		tab[2][0] = znak;
-		break;
-	case 8:
-		tab[2][1] = znak;
-		break;
-	case 9:
-		tab[2][2] = znak;
-		break;
-	}
-
+	tab[wybor / 3][wybor % 3] = znak;
+	
 }
 
 void plansza::wypelnij()
