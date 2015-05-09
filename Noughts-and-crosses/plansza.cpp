@@ -154,7 +154,7 @@ void plansza::koniec(char wynik)
 		cout << "\n\t Wygral gracz nr 2 - Gratuluje!";
 		break;
 	case 'r':
-		cout << "\n\t\t Remis!";
+		cout << "\n\t\t    Remis!";
 	}
 	
 	Sleep(2200);
@@ -177,8 +177,7 @@ void plansza::zapisz_ruch(short wybor)
 	else
 		znak = 'x';
 
-	tab[wybor / 3][wybor % 3] = znak;
-	
+	tab[(wybor-1) / 3][(wybor-1) % 3] = znak;
 }
 
 void plansza::wypelnij()
