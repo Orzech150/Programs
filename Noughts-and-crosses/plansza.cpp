@@ -111,11 +111,6 @@ void plansza::rysuj_krzyzyk(short wybor)
 
 }
 
-void plansza::wyswietl()
-{
-	cout << tresc;
-}
-
 char plansza::sprawdz()
 {
 	// Poziomo - x
@@ -165,8 +160,7 @@ void plansza::koniec(char wynik)
 		tab[i / 3][i % 3] = 0;
 	}
 	system("cls");
-	wyswietl();
-
+	cout << tresc;
 }
 
 void plansza::zapisz_ruch(short wybor)
