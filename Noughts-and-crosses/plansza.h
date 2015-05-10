@@ -20,11 +20,13 @@ class plansza
 public:
 	plansza();
 	
-	void wyswietl();
 	void rysuj_kolko(short);
 	void rysuj_krzyzyk(short);
 	char sprawdz();
 	void koniec(char);
 	void zapisz_ruch(short);
 	void wypelnij();
+
+	friend ostream & operator<<(ostream & ekran, plansza & gra);
 };
+
