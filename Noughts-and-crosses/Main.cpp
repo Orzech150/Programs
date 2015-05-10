@@ -4,13 +4,19 @@ short ruch = 0;
 char tab[3][3] = {}; // x = krzyzyk stoi o = kolko stoi;
 plansza pole;
 
+ostream & operator<<(ostream & ekran, plansza & gra)
+{
+	ekran << gra.tresc;
+	return ekran;
+}
+
 int main()
 {
 	ios_base::sync_with_stdio(false);
 	short wybor;
 	char wynik;
 	pole.wypelnij();
-	pole.wyswietl();
+	cout << pole;
 	while (true)
 	{
 		cout << "\n\n\n Prosze wybrac pole na ktorym chcesz postawic\n Pola sa ponumerowane jak na klawiaturze numerycznej\n\t\t\t";
@@ -27,7 +33,7 @@ int main()
 
 		system("cls");
 
-		pole.wyswietl();
+		cout << pole;
 		pole.zapisz_ruch(wybor);
 		wynik = pole.sprawdz();
 		if (wynik)
