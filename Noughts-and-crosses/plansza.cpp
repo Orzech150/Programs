@@ -152,13 +152,10 @@ void plansza::koniec(char wynik)
 		cout << "\n\t\t    Remis!";
 	}
 	
-	Sleep(2200);
+	Sleep(2000);
 	wypelnij();
 	ruch = 0;
-	for (int i = 0; i < 9; ++i)
-	{
-		tab[i / 3][i % 3] = 0;
-	}
+	memset(tab, 0, sizeof(tab));
 	system("cls");
 	cout << tresc;
 }
