@@ -157,7 +157,7 @@ void plansza::koniec(char wynik)
 	ruch = 0;
 	memset(tab, 0, sizeof(tab));
 	system("cls");
-	cout << tresc;
+	cout << tresc << flush;
 }
 
 void plansza::zapisz_ruch(short wybor)
