@@ -16,10 +16,10 @@ int main()
 	short wybor;
 	char wynik;
 	pole.wypelnij();
-	cout << pole;
+	cout << pole << flush;
 	while (true)
 	{
-		cout << "\n\n\n Prosze wybrac pole na ktorym chcesz postawic\n Pola sa ponumerowane jak na klawiaturze numerycznej\n\t\t\t";
+		cout << "\n\n\n Prosze wybrac pole na ktorym chcesz postawic\n Pola sa ponumerowane jak na klawiaturze numerycznej\n\t\t\t" << endl;
 		
 		do{
 			cin >> wybor;
@@ -33,12 +33,11 @@ int main()
 
 		system("cls");
 
-		cout << pole;
+		cout << pole << flush;
 		pole.zapisz_ruch(wybor);
 		wynik = pole.sprawdz();
 		if (wynik)
 			pole.koniec(wynik);
 			
-		cout.flush();
 	}
 }
