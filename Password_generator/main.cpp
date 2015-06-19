@@ -86,10 +86,10 @@ int main()
 
 		cout << " Nr " << i << " -  " << password << endl;
 		if( file )
-        {
-            password += '\n';
-            plik << " Nr " << i << " -  " << password;
-        }
+        	{
+            		password += '\n';
+            		plik << " Nr " << i << " -  " << password;
+        	}
 		password.clear();
 		isSmall = false, isBig = false, isSpecial = false, isDigit = false;
 
