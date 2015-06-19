@@ -31,7 +31,7 @@ int main()
 	cout << "Zapisac hasla do pliku? (1 - Tak 0 - Nie) ";
 	cin >> file;
 	if (file)
-        plik.open("Passwords.txt", ios::app | ios::out);
+        	plik.open("Passwords.txt", ios::app | ios::out);
 
 	for (int i = 1; i <= quantity; ++i)
 	{
