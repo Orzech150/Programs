@@ -9,12 +9,11 @@ using namespace std;
 int main()
 {
 	srand(time(NULL));
-	bool isSmall = false, isBig = false, isSpecial = false, isDigit = false;
+	bool isSmall = false, isBig = false, isSpecial = false, isDigit = false, isFile;
 	string password;
 	short quantity, length;
 	char check;
-	bool file;
-	fstream plik;
+	fstream file;
 
 	char special[] = { 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47,
 		58, 59, 60, 61, 62, 63, 64, 91, 92, 93, 94, 95, 96, 123, 124, 125, 126 };
@@ -29,9 +28,9 @@ int main()
 	}
 	while (length < 8);
 	cout << "Zapisac hasla do pliku? (1 - Tak 0 - Nie) ";
-	cin >> file;
-	if (file)
-        	plik.open("Passwords.txt", ios::app | ios::out);
+	cin >> isFile;
+	if (isFile)
+        	file.open("Passwords.txt", ios::app | ios::out);
 
 	for (int i = 1; i <= quantity; ++i)
 	{
@@ -85,10 +84,10 @@ int main()
 		}
 
 		cout << " Nr " << i << " -  " << password << endl;
-		if( file )
-        	{
+		if( isFile )
+		{
             		password += '\n';
-            		plik << " Nr " << i << " -  " << password;
+            		file << " Nr " << i << " -  " << password;
         	}
 		password.clear();
 		isSmall = false, isBig = false, isSpecial = false, isDigit = false;
